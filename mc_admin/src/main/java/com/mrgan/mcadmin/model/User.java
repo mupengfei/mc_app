@@ -12,6 +12,7 @@ import lombok.ToString;
 @Data
 @Entity
 @ToString
+@lombok.AllArgsConstructor
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,6 +21,4 @@ public class User {
 	private String name;
 	@NotNull
 	private String pwd;
-	@NotNull
-	private boolean rememberMe;
 }
