@@ -37,7 +37,7 @@ public class MShiroFilterFactoryBean extends ShiroFilterFactoryBean {
 	@Override
 	protected AbstractShiroFilter createInstance() throws Exception {
 
-		SecurityManager securityManager = getSecurityManager();
+		WebSecurityManager securityManager = (WebSecurityManager) getSecurityManager();
 		if (securityManager == null) {
 			String msg = "SecurityManager property must be set.";
 			throw new BeanInitializationException(msg);

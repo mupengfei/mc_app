@@ -13,12 +13,13 @@ import lombok.ToString;
 @Entity
 @ToString
 @lombok.AllArgsConstructor
+@lombok.NoArgsConstructor
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	@NotNull
-	private String name;
+	private String username;
 	@NotNull
-	private String pwd;
+	private String password;
 }
